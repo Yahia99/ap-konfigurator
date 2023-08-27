@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+main {
+  height: 100%;
+  padding: 20px 100px;
+}
+
+main h2 {
+  margin-bottom: 20px;
+}
+
+.container {
+  height: 90vh;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+.list {
+  padding: 1.25rem;
+  border: 2px solid black;
+  border-radius: 0.625rem;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.625rem;
+  flex-direction: column;
+  flex: 1;
+}
+
+.list li {
+  padding: 0.625rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.1s linear;
+}
+.list li:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 1px #aaa;
+  transform: scale(1.05);
+}
+
+.list li i {
+  font-size: 1.25rem;
+  color: steelblue;
+}
+
+.platz {
+  padding: 1.25rem;
+  border: 2px solid black;
+  border-radius: 0.625rem;
+  transition: all 0.1s linear;
+  flex: 4;
+}
