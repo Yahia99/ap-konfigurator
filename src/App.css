@@ -44,7 +44,7 @@ main h2 {
 }
 .list li:hover {
   cursor: pointer;
-  box-shadow: 0px 3px 5px 1px #aaa;
+  filter: drop-shadow(4px 6px 6px #cfcfcf);
   transform: scale(1.05);
 }
 
@@ -55,8 +55,21 @@ main h2 {
 
 .platz {
   padding: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 0.625rem;
+  justify-content: center;
+  align-items: center;
   border: 2px solid black;
   border-radius: 0.625rem;
   transition: all 0.1s linear;
   flex: 4;
+}
+
+.items {
+  padding: 1.25rem;
+}
+.items i {
+  font-size: 150px;
+  color: steelblue;
 }

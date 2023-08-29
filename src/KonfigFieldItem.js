@@ -1,24 +1,12 @@
 import React from "react";
 
-function KonfigFieldItem(props) {
-  const { data, ...items } = props;
-  const { item } = items;
-  console.log(...data);
-  // const img = data.img
-  if (items !== []) {
-    return item.map((x) => {
-      return (
-        <>
-          <div>{x.innerText}</div>
-        </>
-      );
-    });
-  } else {
+function KonfigFieldItem({ items }) {
+  return items.map((item) => {
     return (
-      <>
-        <div>Please select an Item</div>
-      </>
+      <div className="items" key={item.id}>
+        <i className={`fa-solid fa-${item.iconName}`}></i>
+      </div>
     );
-  }
+  });
 }
 export default KonfigFieldItem;

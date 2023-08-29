@@ -8,24 +8,19 @@ import { useState } from "react";
 
 function KonfigApp() {
   const [items, setItems] = useState([]);
-  const handleItems = (e) => {
-    e.stopPropagation();
-    const item = e.currentTarget;
-    setItems([...items, item]);
+  const addItem = (itemID) => {
+    const newItems = data.filter((item) => item.id === itemID);
+    setItems([...items, ...newItems]);
   };
   return (
     <main className="App">
       <h2 className="center">Arbeitsplatz Konfigurator</h2>
       <div className="container">
         <KonfigList>
-          <KonfigListItem
-            items={data}
-            key={data.id}
-            handleItems={handleItems}
-          />
+          <KonfigListItem items={data} addItem={addItem} />
         </KonfigList>
         <KonfigField>
-          <KonfigFieldItem item={items} data={data} />
+          <KonfigFieldItem items={items} />
         </KonfigField>
       </div>
     </main>
