@@ -32,7 +32,7 @@ main h2 {
   flex: 1;
 }
 
-.list li {
+.list button {
   padding: 0.625rem 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -42,13 +42,13 @@ main h2 {
   border-radius: 5px;
   transition: all 0.1s linear;
 }
-.list li:hover {
+.list button:hover {
   cursor: pointer;
-  filter: drop-shadow(4px 6px 6px #cfcfcf);
+  filter: drop-shadow(4px 4px 4px #cfcfcf);
   transform: scale(1.05);
 }
 
-.list li i {
+.list button i {
   font-size: 1.25rem;
   color: steelblue;
 }

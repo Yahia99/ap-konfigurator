@@ -17,7 +17,7 @@ function KonfigApp() {
       <h2 className="center">Arbeitsplatz Konfigurator</h2>
       <div className="container">
         <KonfigList>
-          <KonfigListItem items={data} addItem={addItem} />
+          <KonfigListItem items={data} addItem={addItem} newItems={items} />
         </KonfigList>
         <KonfigField>
           <KonfigFieldItem items={items} />
