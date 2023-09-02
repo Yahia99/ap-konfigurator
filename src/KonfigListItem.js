@@ -19,9 +19,27 @@ function KonfigListItem({ items, addItem, newItems }) {
   );
 }
 function checkArr(arr, item) {
-  if (item.name === "Monitor") {
-    const monitor = arr.includes();
+  const itemName = item.itemName;
+  if (itemName === "Monitor") {
+    if (arr.filter((x) => x === item).length === 2) {
+      return true;
+    }
   }
-  return arr.includes(item);
+  if (itemName === "Laptop") {
+    console.log(true);
+    if (arr.filter((x) => x.itemName === "Desktop PC").length === 1) {
+      return true;
+    } else {
+      return arr.includes(item);
+    }
+  }
+  if (itemName === "Desktop PC") {
+    console.log(true);
+    if (arr.filter((x) => x.itemName === "Laptop").length === 1) {
+      return true;
+    } else {
+      return arr.includes(item);
+    }
+  }
 }
 export default KonfigListItem;
