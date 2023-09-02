@@ -8,9 +8,13 @@ import { useState } from "react";
 
 function KonfigApp() {
   const [items, setItems] = useState([]);
-  const addItem = (itemID) => {
-    const newItems = data.filter((item) => item.id === itemID);
+  const addItem = (itemId) => {
+    const newItems = data.filter((item) => item.id === itemId);
     setItems([...items, ...newItems]);
+  };
+  const deleteItem = (itemId) => {
+    const newItems = items.filter((item) => item.id !== itemId);
+    setItems([...newItems]);
   };
   return (
     <main className="App">
@@ -20,7 +24,7 @@ function KonfigApp() {
           <KonfigListItem items={data} addItem={addItem} newItems={items} />
         </KonfigList>
         <KonfigField>
-          <KonfigFieldItem items={items} />
+          <KonfigFieldItem items={items} deleteItem={deleteItem} />
         </KonfigField>
       </div>
     </main>

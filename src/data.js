@@ -3,7 +3,6 @@ const data = [
     id: 1,
     itemName: "Desktop PC",
     iconName: "computer",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/products/desktops-and-all-in-ones/optiplex/3000-tsff/media-gallery/optiplex-3000t-gallery-4.psd?fmt=png-alpha&pscan=auto&scl=1&wid=5000&hei=5000&qlt=100,1&resMode=sharp2&size=5000,5000&chrss=full&imwidth=5000",
   },
   {
     id: 2,
